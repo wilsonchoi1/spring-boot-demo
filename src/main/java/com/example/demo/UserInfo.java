@@ -50,4 +50,8 @@ public class UserInfo {
 		this.address = address;
 		return this;
 	}
+	
+	public String getHostname(){
+		return this.hostname;
+	}
 }
