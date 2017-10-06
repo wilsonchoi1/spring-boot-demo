@@ -8,11 +8,16 @@ public class UserInfo {
 	private String username;
 	private String password;
 	private String address;
-	private String hostname = InetAddress.getLocalHost().getHostName();
+	private String hostname;
 	
 	public static UserInfo createUser(int id){
 		UserInfo user = new UserInfo();
 		return user.setId(id);
+		try {
+			hostname = InetAddress.getLocalHost().getHostName();
+		} catch (Exception ex){
+			ex.printStackTrace();
+		}
 	}
 	
 	public int getId() {
