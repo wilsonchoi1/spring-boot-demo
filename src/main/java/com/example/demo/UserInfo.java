@@ -12,12 +12,12 @@ public class UserInfo {
 	
 	public static UserInfo createUser(int id){
 		UserInfo user = new UserInfo();
-		return user.setId(id);
 		try {
 			user.setHostname(InetAddress.getLocalHost().getHostName());
 		} catch (Exception ex){
 			ex.printStackTrace();
 		}
+		return user.setId(id);
 	}
 	
 	public int getId() {
