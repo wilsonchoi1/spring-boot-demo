@@ -1,11 +1,14 @@
 package com.example.demo;
 
+import java.net.InetAddress;
+
 public class UserInfo {
 
 	private int id;
 	private String username;
 	private String password;
 	private String address;
+	private String hostname = InetAddress.getLocalHost().getHostName();
 	
 	public static UserInfo createUser(int id){
 		UserInfo user = new UserInfo();
