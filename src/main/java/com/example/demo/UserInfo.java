@@ -14,7 +14,7 @@ public class UserInfo {
 		UserInfo user = new UserInfo();
 		return user.setId(id);
 		try {
-			hostname = InetAddress.getLocalHost().getHostName();
+			user.setHostname(InetAddress.getLocalHost().getHostName());
 		} catch (Exception ex){
 			ex.printStackTrace();
 		}
@@ -54,6 +54,10 @@ public class UserInfo {
 	public UserInfo setAddress(String address) {
 		this.address = address;
 		return this;
+	}
+	
+	public void setHostname(String hostname){
+		this.hostname = hostname;
 	}
 	
 	public String getHostname(){
